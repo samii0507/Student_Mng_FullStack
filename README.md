@@ -54,4 +54,4 @@ Efficiently manage student information and streamline administrative tasks with 
 **Clone the repository:**
 
 ```bash
-
+https://github.com/samii0507/Student_Mng_FullStack.git

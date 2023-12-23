@@ -49,9 +49,9 @@ Efficiently manage student information and streamline administrative tasks with 
 
 - Java Development Kit (JDK)
 - Node.js and npm (or yarn)
-- Your preferred database management system (e.g., MySQL, PostgreSQL)
+- MySQl
 
 **Clone the repository:**
 
 ```bash
-git clone [https://github.com/your-username/student-management-system.git](https://github.com/your-username/student-management-system.git)
+

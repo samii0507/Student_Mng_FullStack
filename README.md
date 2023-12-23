@@ -2,7 +2,7 @@
 
 Efficiently manage student information and streamline administrative tasks with this robust full-stack application.
 
-**Student Management System Screenshot:** https://your-image-hosting-service/screenshot.png
+
 
 ## Features
 

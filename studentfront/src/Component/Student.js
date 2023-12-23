@@ -42,7 +42,7 @@ export default function Student() {
         }
       )
       },[])
-      
+
   return (
     <Container>
         <Paper elevation={3} style={paperStyle}>
@@ -67,6 +67,22 @@ export default function Student() {
             <Button variant="contained" color="secondary" onClick={handleClick}>
   Submit
 </Button>
+</Paper>
+    <h1>Students</h1>
+
+    <Paper elevation={3} style={paperStyle}>
+
+      {students.map(student=>(
+        <Paper elevation={6} style={{margin:"10px",padding:"15px", textAlign:"left"}} key={student.id}>
+         Id:{student.id}<br/>
+         Name:{student.name}<br/>
+         Address:{student.address}
+
+        </Paper>
+      ))
+}
+
+      
         </Paper>
     </Container>
     

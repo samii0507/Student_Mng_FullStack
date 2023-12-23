@@ -23,11 +23,8 @@ Efficiently manage student information and streamline administrative tasks with 
 
 **Key functionalities:**
 
-- Create, view, update, and delete student records.
-- Manage courses and enrollments.
-- Track attendance and grades.
-- Generate reports and visualize student data.
-- Role-based access control for different user permissions.
+- Create, view,  student records.
+
 
 ## Technology Stack
 

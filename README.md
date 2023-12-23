@@ -41,7 +41,7 @@ Efficiently manage student information and streamline administrative tasks with 
 
 **Database:**
 
-- (Your chosen database)
+- MySql
 
 ## Setup Instructions
 

@@ -2,8 +2,10 @@ import * as React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
-import { Container, Paper } from '@mui/material';
-import { useState } from 'react';
+import { Container, Paper,Button } from '@mui/material';
+import { useState,useEffect } from 'react';
+
+
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -18,6 +20,29 @@ export default function Student() {
     const classes = useStyles();
     const[name,SetName] = useState('')
     const[address,SetAddress]=useState('')
+    const[students,setStudents]=useState([])
+    const handleClick=(e)=>{
+        e.preventDefault()
+        const student ={name,address}
+        console.log(student)
+        fetch("http://localhost:8080/student/add",{
+            method:"POST",
+            headers:{"Content-Type":"application/json"},
+            body:JSON.stringify(student)
+      
+        }).then(()=>{
+          console.log("New Student added")
+        })
+    }
+    useEffect(()=>{
+        fetch("http://localhost:8080/student/getAll")
+        .then(res=>res.json())
+        .then((result)=>{
+          setStudents(result);
+        }
+      )
+      },[])
+      
   return (
     <Container>
         <Paper elevation={3} style={paperStyle}>
@@ -39,6 +64,9 @@ export default function Student() {
                 onChange={(e)=>SetAddress(e.target.value)}
                 />
             </Box>
+            <Button variant="contained" color="secondary" onClick={handleClick}>
+  Submit
+</Button>
         </Paper>
     </Container>
     
